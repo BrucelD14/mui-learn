@@ -1,6 +1,14 @@
-import { AppBar, InputBase, styled, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Avatar,
+  Badge,
+  InputBase,
+  styled,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import { Cloud } from "@mui/icons-material";
+import { Cloud, Mail, Notifications } from "@mui/icons-material";
 import { Box } from "@mui/system";
 
 const StyledToolbar = styled(Toolbar)({
@@ -14,9 +22,7 @@ const Search = styled("div")(({ theme }) => ({
   borderRadius: theme.shape.borderRadius,
   width: "40%",
 }));
-const Icons = styled(Box)(({ theme }) => ({
-  backgroundColor: "white",
-}));
+const Icons = styled(Box)(({ theme }) => ({}));
 
 const Navbar = () => {
   return (
@@ -27,9 +33,20 @@ const Navbar = () => {
         </Typography>
         <Cloud sx={{ display: { xs: "block", sm: "none" } }} />
         <Search>
-        <InputBase placeholder="search..." />
+          <InputBase placeholder="search..." />
         </Search>
-        <Icons>icons</Icons>
+        <Icons>
+          <Badge badgeContent={4} color="error">
+            <Mail />
+          </Badge>
+          <Badge badgeContent={2} color="error">
+            <Notifications />
+          </Badge>
+          <Avatar
+            sx={{ width: 30, height: 30 }}
+            src="https://images.pexels.com/photos/2128807/pexels-photo-2128807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          />
+        </Icons>
       </StyledToolbar>
     </AppBar>
   );
