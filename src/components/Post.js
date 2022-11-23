@@ -14,8 +14,7 @@ import {
 
 const Post = () => {
   return (
-    <div>
-      <Card>
+      <Card sx={{margin:5}}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
@@ -27,8 +26,8 @@ const Post = () => {
               <MoreVert />
             </IconButton>
           }
-          title="Shrimp and Chorizo Paella"
-          subheader="September 14, 2016"
+          title="Jafar"
+          subheader="September 23, 2022"
         />
         <CardMedia
           component="img"
@@ -55,7 +54,6 @@ const Post = () => {
           </IconButton>
         </CardActions>
       </Card>
-    </div>
   );
 };
 
