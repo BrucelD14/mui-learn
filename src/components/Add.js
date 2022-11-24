@@ -1,4 +1,13 @@
-import { Box, Fab, Modal, styled, Tooltip } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Fab,
+  Modal,
+  styled,
+  TextField,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 import { Add as AddIcon } from "@mui/icons-material";
 
@@ -6,6 +15,13 @@ const StyledModal = styled(Modal)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+});
+
+const UserBox = styled(Box)({
+  display: "flex",
+  alignItems: "center",
+  gap: "10px",
+  marginBottom: "20px",
 });
 
 const Add = () => {
@@ -33,7 +49,25 @@ const Add = () => {
         aria-describedby="modal-modal-description"
       >
         <Box width={400} height={280} bgcolor="white" p={3} borderRadius={5}>
-          Hello
+          <Typography variant="h6" color="gray" textAlign="center">
+            Create Post
+          </Typography>
+          <UserBox>
+            <Avatar
+              src="https://images.pexels.com/photos/2128807/pexels-photo-2128807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              sx={{ width: 30, height: 30 }}
+            />
+            <Typography fontWeight={500} variant="span">
+              Jafar
+            </Typography>
+          </UserBox>
+          <TextField sx={{width:"100%"}}
+            id="standard-multiline-static"
+            multiline
+            rows={4}
+            placeholder="Hello what's up"
+            variant="standard"
+          />
         </Box>
       </StyledModal>
     </>
