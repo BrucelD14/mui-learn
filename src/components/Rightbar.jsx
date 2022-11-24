@@ -118,7 +118,7 @@ const Rightbar = () => {
         >
           <ListItem alignItems="flex-start">
             <ListItemAvatar>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+              <Avatar alt="Remy Sharp" src="https://images.pexels.com/photos/2773977/pexels-photo-2773977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" />
             </ListItemAvatar>
             <ListItemText
               primary="Brunch this weekend?"
