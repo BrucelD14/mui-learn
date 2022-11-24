@@ -1,15 +1,25 @@
 import {
   Avatar,
   Box,
+  Button,
+  ButtonGroup,
   Fab,
   Modal,
+  Stack,
   styled,
   TextField,
   Tooltip,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Add as AddIcon } from "@mui/icons-material";
+import {
+  Add as AddIcon,
+  DateRange,
+  EmojiEmotions,
+  Image,
+  PersonAdd,
+  VideoCameraBack,
+} from "@mui/icons-material";
 
 const StyledModal = styled(Modal)({
   display: "flex",
@@ -61,13 +71,30 @@ const Add = () => {
               Jafar
             </Typography>
           </UserBox>
-          <TextField sx={{width:"100%"}}
+          <TextField
+            sx={{ width: "100%" }}
             id="standard-multiline-static"
             multiline
-            rows={4}
+            rows={3}
             placeholder="Hello what's up"
             variant="standard"
           />
+          <Stack direction="row" gap={1} mt={2} mb={3}>
+            <EmojiEmotions color="primary" />
+            <Image color="secondary" />
+            <VideoCameraBack color="success" />
+            <PersonAdd color="error" />
+          </Stack>
+          <ButtonGroup 
+            fullWidth
+            variant="contained"
+            aria-label="outlined primary button group"
+          >
+            <Button>Post</Button>
+            <Button sx={{width:"100px"}}>
+              <DateRange />
+            </Button>
+          </ButtonGroup>
         </Box>
       </StyledModal>
     </>
